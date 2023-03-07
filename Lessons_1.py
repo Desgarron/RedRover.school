@@ -4,7 +4,7 @@ print('Hello world!')
 #  Напишите программу, которая на входе
 #  получает имя пользователя, cохраняет его в переменную user_name и выводит строку  "Hello {user_name}!"
 
-user_name = input('Enter name -> ')
+# user_name = input('Enter name -> ')
 print(f'Hello {user_name}')
 
 
@@ -20,14 +20,15 @@ def first_last(w, s):
     print(s * w)
 
 
-def middle(w, s):
-    n = s + ' ' * (w - 2) + s
-    print(n, n, sep='\n')
+def middle(w, l, s):
+    n = (s + ' ' * (w - 2) + s + '\n') * l
+    print(n, end='')
 
 
-width = int(input('Ширина фігури -> '))
+width = int(input('Ширина фигуры -> '))
+lenght = int(input('Длинна фигуры -> '))
 sumbol = input('Символ -> ')
 
 first_last(width, sumbol)
-middle(width, sumbol)
+middle(width, lenght, sumbol)
 first_last(width, sumbol)
