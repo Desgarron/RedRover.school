@@ -1,7 +1,7 @@
 # 3.1. Дан список my_list = ['a', 'b', [1, 2, 3], 'd']. Распечатайте значения 1, 2, 3
 
 my_list = ['a', 'b', [1, 2, 3], 'd']
-print(my_list[2])
+print(*my_list[2], sep='\n')
 
 
 # 3.2 Дан список list_1 = ['Hi', 'ananas', 2, None, 75, 'pizza', 36, 100]
@@ -9,6 +9,8 @@ print(my_list[2])
 #    - распечатайте все строки, где есть буква 'a'
 
 list_1 = ['Hi', 'ananas', 2, None, 75, 'pizza', 36, 100]
+
+print(sum(filter(lambda y: isinstance(y, int), list_1)))
 for i in list_1:
     if 'a' in str(i):
         print(i)
@@ -88,4 +90,5 @@ set2 = {5, 'z', 1, 8, 9, 21, 100, 'l', 785}
 
 print(set1.intersection(set2))
 print(set1.symmetric_difference(set2))
-print(set1 == set2)
+print(set1.issubset(set2))
+print(set2.issubset(set1))
