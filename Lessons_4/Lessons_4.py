@@ -32,15 +32,15 @@ from functools import reduce
 new_list_multi = reduce(lambda x, y: x*y, my_list, 1)
 
 # 4.5. Напишите декоратор, который высчитывает время работы функции, которую он принимает в качестве параметра
-import timeit
+import time
 
 
 def work_func_time(func):
 
     def wrapper(*args, **kwargs):
-        start_time = timeit.default_timer()
+        start_time = time.perf_counter()
         result = func(*args, **kwargs)
-        print('Time to execute -> ', timeit.default_timer() - start_time)
+        print('Time to execute -> ', time.perf_counter() - start_time)
         return result
     return wrapper
 
