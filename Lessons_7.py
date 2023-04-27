@@ -28,8 +28,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-EMAIL = 'nahornyi.y+1@gmail.com'
-PASSWORD = 'Devil2421711'
+EMAIL = ''
+PASSWORD = ''
 
 
 def test_open_sign_in_page():
